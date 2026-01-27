@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form class="form">
+      <fieldset class="form-group">
+        <h3>Ваши личные данные</h3>
+        <label class="label">
+          <span>Ваше имя</span>
+          <div>
+            <input
+              class="input"
+              type="name"
+              placeholder="Name"
+              name="name"
+              required
+            />
+          </div>
+        </label>
+        <label class="label">
+          <span>Ваш возраст</span>
+          <div>
+            <input
+              class="input"
+              type="number"
+              placeholder="Возраст"
+              name="age"
+              required
+            />
+          </div>
+        </label>
+        <label class="label">
+          <span>Ваш номер телефона</span>
+          <div>
+            <input
+              class="input"
+              type="tel"
+              placeholder="Номер телефона"
+              name="phone"
+              required
+            />
+          </div>
+        </label>
+        <label class="input" class="label">
+          <span>Ваша почта</span>
+          <div>
+            <input
+              class="input"
+              type="email"
+              placeholder="Почта"
+              name="email"
+              required
+            />
+          </div>
+        </label>
+        <label>
+          <div>Сообщение</div>
+          <div>
+            <textarea
+              name="text"
+              placeholder="Ваше сообщение"
+              required
+            ></textarea>
+          </div>
+        </label>
+        <label>
+          <input class="checkbox" type="checkbox" />
+          Я принимаю правила
+        </label>
+        <button type="submit" class="button">Отправить</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
