@@ -1,0 +1,41 @@
+html{
+    font-family: sans-serif;
+
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+
+ul, li {
+    list-style: none;
+    display: inline-block;
+    margin:  10px;
+    padding: 0;
+}
+
+
+.container {
+    max-width: 1320px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+
+.header_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: black;
+    flex-wrap: wrap;
+    font-weight: 500;
+}
+
+hr{
+    max-width: 1320px;
+    color: #333;
+    size: 6px;
+    
+}
