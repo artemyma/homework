@@ -4,6 +4,7 @@
     color: var(--main-color);
     scroll-behavior: smooth;
     scroll-padding-top: 98px;
+    scrollbar-gutter: stable;
 }
 
 .page__body {
@@ -21,7 +22,8 @@
 }
 
 img {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 a:focus-visible,
@@ -88,5 +90,4 @@ margin-bottom: 40px;
 margin-bottom: 30px;
 }
 }
-
 

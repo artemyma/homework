@@ -1,4 +1,7 @@
 .modal {
+    --transition-time: 0.2s;
+
+
     position: fixed;
     inset: 0;
     z-index: var(--layer-3);
@@ -10,12 +13,14 @@
     text-align: center;
     opacity: 0;
     visibility: hidden;
+    -webkit-transition: opacity var(--transition-time),visibility var(--transition-time);
+    -o-transition: opacity var(--transition-time),visibility var(--transition-time);
     transition: opacity var(--transition-time),visibility var(--transition-time);
 }
 
 .modal--open {
 opacity: 1;
-visibility: hidden;
+visibility: visible;
 } 
 
 .modal::before {
@@ -31,7 +36,8 @@ visibility: hidden;
     margin-block: 50px;
     vertical-align: middle;
     border-radius: 12px;
-    box-shadow: 0 0 20px var(--shadow-color);
+    -webkit-box-shadow: 0 0 20px var(--shadow-color);
+            box-shadow: 0 0 20px var(--shadow-color);
     background-color: var(--bg-color);
 }
 
