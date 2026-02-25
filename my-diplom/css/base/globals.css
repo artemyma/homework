@@ -1,0 +1,19 @@
+/* .page {
+    font-family: var(--font-family);
+    font-weight: 400;
+} */
+
+.container {
+    max-width: var(--container-width);
+    margin-inline:auto;
+}
+
+.text-regular {
+    font-size: 16px;
+    line-height: 138%;
+    color: #00000099; 
+}
+
+.text-regular {
+    font-weight: 400;
+}

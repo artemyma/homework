@@ -1,0 +1,119 @@
+<!doctype html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>SHOP.CO</title>
+  </head>
+  <body class="page__body">
+    <header class="header header__container container">
+      <a href="/" class="header__logo-link">SHOP.CO</a>
+      <nav class="header__menu" id="header__menu" aria-label="Главное меню">
+        <ul class="header__menu-list">
+          <li class="header__menu-item">
+            <a class="header__menu-link text-regular" href="#">Магазин</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="#">Скидки</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="#">Новые поступления</a>
+          </li>
+          <li class="header__menu-item">
+            <a class="header__menu-link" href="#">Бренды</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__search">
+        <form class="header__search-form" action="/search" method="get">
+          <button class="header__search-button" type="submit">
+            <svg width="24" height="24">
+              <use
+                class="header__search-button-icon"
+                href="./icon/sprite.svg#search"
+              ></use>
+            </svg>
+          </button>
+          <input
+            class="header__search-input text-regular"
+            type="search"
+            name="query"
+            placeholder="Искать товары..."
+          />
+        </form>
+      </div>
+      <div class="header__actions">
+        <button
+          class="header__actions-button"
+          title="Корзина"
+          aria-label="Корзина"
+          href="#cart"
+        >
+          <svg width="24" height="24">
+            <use
+              class="header__acthions-icon"
+              href="./icon/sprite.svg#cart"
+            ></use>
+          </svg>
+        </button>
+        <button
+          class="header__actions-button"
+          title="Профиль"
+          aria-label="Профиль"
+          href="#profile"
+        >
+          <svg width="24" height="24">
+            <use
+              class="header__acthions-icon"
+              href="./icon/sprite.svg#profile"
+            ></use>
+          </svg>
+        </button>
+      </div>
+    </header>
+    <main class="main">
+      <section class="hero hero__container">
+        <div class="hero__info">
+          <h1 class="hero__info-title">
+            НАЙДИ ОДЕЖДУ КОТОРАЯ ВЫРАЗИТ ТВОЙ СТИЛЬ
+          </h1>
+          <p class="hero__info-text text-regular">
+            Просмотрите наш набор тщательно сделанной одежды, созданный чтобы
+            подчеркнуть ваш индивидуальный стиль.
+          </p>
+          <a type="button" class="hero__info-button-buy">Купить сейчас</a>
+          <div class="hero__info-list">
+            <div class="hero__info-item">
+              <h2 class="hero__info-item-title">200+</h2>
+              <p class="hero__info-item-text text-regular">Всемирных брендов</p>
+            </div>
+            <div class="hero__info-item-decor"></div>
+            <div class="hero__info-item">
+              <h2 class="hero__info-item-title">2,000+</h2>
+              <p class="hero__info-item-text text-regular">
+                Качественных товаров
+              </p>
+            </div>
+            <div class="hero__info-item-decor"></div>
+            <div class="hero__info-item">
+              <h2 class="hero__info-item-title">30,000+</h2>
+              <p class="hero__info-item-text text-regular">
+                Счастливых клиентов
+              </p>
+            </div>
+          </div>
+        </div>
+        <picture>
+          <img
+            width="1440"
+            height="663"
+            class="hero__info-img"
+            src="./images/hero-image.png"
+            alt="Девушка и парень в черных джинсовках и очках стоят боком лицом к друг другу"
+          />
+        </picture>
+      </section>
+    </main>
+  </body>
+</html>
