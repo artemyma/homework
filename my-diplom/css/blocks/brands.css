@@ -1,0 +1,21 @@
+.brands {
+    /* display: none; */
+    background-color: var(--background-color-2);
+}
+
+.brands__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 122px;
+}
+
+@media (width < 992px) {
+    .brands__list {
+    min-height: 146px;
+    gap: 20px 0px;
+    padding-block: 39px;
+    justify-content: space-evenly;
+}
+}
