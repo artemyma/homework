@@ -46,38 +46,58 @@ const deleteTodoById = (todos, todoId) => {
 
 // При помощи метода querySelector получаем элементы .form, .input и .todos
 
-const form = document.querySelector(".form")
-const input = document.querySelector(".input")
-const todos_ = document.querySelector(".todos")
+const formElement = document.querySelector(".form")
+const inputElement = document.querySelector(".input")
+const todosElement = document.querySelector(".todos")
 
 // Создаем функцию createTodoElement(text), которая будет создавать todo в виде разметки
 
-const createTodoElement = (text) => {
-  const todo = document.createElement("li")
-  todo.classList.add("todo")
-
-  todo.innerHTML = `<div class="todo-text"> 
-  ${text}
+const createTodoElement = todo => {
+  const todoElement = document.createElement("li")
+  todoElement.classList.add("todo")
+  todoElement.dataset.id = todo[todoKeys.id]
+  todoElement.innerHTML = `<div class="todo-text"> 
+  ${todo[todoKeys.text]}
   </div>
   <div class="todo-actions">
   <button class="button-complete button">&#10004;</button>
   <button class="button-delete button">&#10006;</button>
   </div>`
 
-  return todo
+  return todoElement
 }
 
 // Создаем функцию handleCreateTodo(todos, text), которая будет вызывать createTodo и createTodoElement
 
 const handleCreateTodo = (todos, text) => {
-
-  const newTodo = createTodo(todos, text);
-
-  const todoElement = createTodoElement(newTodo[todoKeys.text]);
-
-  todos_.appendChild(todoElement);
-
-  return newTodo;
+  const todo = createTodo(todos, text);
+  const todoElement = createTodoElement(todo);
+  todosElement.prepend(todoElement);
+  return todo;
 };
 
+formElement.addEventListener("submit", (event) => {
+  event.preventDefault()
+  const text = inputElement.value.trim()
+  if (text == "") {
+    return
+  }
+  handleCreateTodo(todos, text)
+  inputElement.value = ""
+})
 
+
+todosElement.addEventListener("click", event => {
+  const todo = event.target.closest(".todo")
+  if (!todo) return
+
+  if (event.target.matches(".button-complete")) {
+    completeTodoById(todos, Number(todo.dataset.id))
+    todo.classList.toggle("completed")
+  }
+
+  if (event.target.matches(".button-delete")) {
+    deleteTodoById(todos, Number(todo.dataset.id))
+    todo.remove()
+  }
+})
