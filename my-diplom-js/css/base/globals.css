@@ -1,0 +1,47 @@
+.page__body {
+  font-family: var(--font-family);
+  font-weight: 400;
+  color: var(--background-color-2);
+  scroll-padding-top: 65px;
+  scrollbar-gutter: stable;
+  scroll-behavior: smooth;
+  min-width: 390px;
+  min-height: 100vh;
+}
+
+.page__body--no-scroll {
+  overflow-y: hidden;
+}
+
+.container {
+  width: min(var(--container-width), 100% - var(--container-padding) * 2);
+  margin-inline: auto;
+}
+
+.text-regular {
+  font-size: 16px;
+  line-height: 138%;
+  color: #00000099;
+}
+
+.text-regular {
+  font-weight: 400;
+}
+
+.footer-title {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: clamp(14px, 0.829rem + 0.19vw, 16px);
+  line-height: 113%;
+  letter-spacing: 0.19em;
+  text-transform: uppercase;
+  color: var(--background-color-2);
+}
+
+.hidden-new {
+  display: none;
+}
+
+.hidden-lead {
+  display: none;
+}

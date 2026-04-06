@@ -1,0 +1,45 @@
+@font-face {
+  font-family: Inter;
+  src: local("Inter Regular"), local("Inter-Regular"),
+  url(../../fonts/Inter_24pt-Regular.woff2) format("woff2");
+       font-weight: 400;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: Inter;
+  src: local("Inter-Medium"), local("Inter Medium"),
+    url(../../fonts/Inter_18pt-Medium.woff2) format("woff2");
+       font-weight: 500;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: Inter;
+  src: local("Inter-Bold"), local("Inter Bold"),
+    url(../../fonts/Inter_24pt-Bold.woff2) format("woff2");
+       font-weight: 700;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: Geologica;
+  src: local("Geologica ExtraBold"), local("Geologica-ExtraBold"),
+  url(../../fonts/Geologica-ExtraBold.woff2) format("woff2");
+       font-weight: 800;
+       font-display: swap;
+       font-style: normal;
+}
+
+@font-face {
+  font-family: IntegralCF;
+  src: local("IntegralCF-Bold"), local("IntegralCF Bold"),
+   url(../../fonts/IntegralCF-Bold.woff2) format("woff2");
+       font-weight: 700;
+       font-display: swap;
+       font-style: normal;
+}
+

@@ -1,0 +1,32 @@
+:root {
+    /* font-family */
+    --font-family: Inter, sans-serif;
+    --second-family: Geologica, sans-serif;
+    --third-family: IntegralCF, sans-serif;
+    
+    /* colors */
+    --background-color-1:  #f0f0f0;
+    --background-color-2:  #000;
+    --bg-color-hero:#F2F0F1;
+    --border-color: #0000001a;
+    --main-color: #fff;
+    --accent-color:#00000099;
+    --hover-color: #838383d0;
+    --shadow-color: #404040c8;
+
+    /* z-index */
+    --layer-1: 1;
+    --layer-2: 2;
+    --layer-3: 3;
+    --layer-4: 4;
+    
+
+    /* transition */
+    --transition-time: 0.5s;
+    
+
+
+    /* container */
+    --container-width: 1240px;
+    --container-padding: 15px;
+}

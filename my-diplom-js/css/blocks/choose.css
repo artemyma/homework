@@ -1,0 +1,188 @@
+.choose__container {
+    display: flex;
+    flex-direction: column;
+    background: #f0f0f0;
+}
+
+@media (width > 768px) {
+ .choose__container {
+    border-radius: 40px;
+    max-width: 1240px;
+    min-height: 866px;  
+    margin-top: 80px;
+}   
+}
+
+@media (width <= 768px) {
+  .choose__container {
+    border-radius: 20px;
+    min-width: 358px;
+    min-height: 975px;  
+    margin-top: 50px;
+}  
+}
+
+.choose__title {
+    font-family: var(--second-family);
+    font-weight: 900;
+    text-align: center;
+    color: #000;
+}
+
+.choose__card-title {
+    padding-top: 25px;
+    padding-left: 36px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: clamp(24px, 1.239rem + 1.3vw, 36px);
+    color: #000;
+    
+}
+
+@media (width > 768px) {
+.choose__card-title {
+    padding-top: 25px;
+    padding-left: 36px;
+} 
+}  
+
+@media (width <= 768px) {
+.choose__card-title {
+    padding-top: 16px;
+    padding-left: 24px;
+}    
+}
+
+@media (width > 768px) {
+ .choose__title {
+    font-size: 48px;
+    margin-top: 70px;
+    margin-bottom: 64px;
+}   
+}
+
+@media (width <= 768px) {
+ .choose__title {
+    font-size: 32px;
+    line-height: 120%;
+    margin-top: 40px;
+    margin-bottom: 28px;
+}   
+}
+
+.choose__wrapper-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 289px);
+    grid-auto-rows: 289px;
+    gap: 20px;
+    padding-inline: 64px;
+}
+
+@media (width <= 768px) {
+    .choose__wrapper-cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 190px);
+    grid-auto-rows: 190px;
+    gap: 20px;
+    padding-inline: 24px;
+}
+}
+
+@media (width > 768px) {
+.choose__card {
+    position: relative;
+    grid-column-start: 1;
+    border-radius: 20px;
+    background: url(../../images/choose-image/choose-card-img-1.png) 60% 10%;
+    background-size: cover; 
+}
+}
+
+/* решение по ховер эффекту, из за моей тупости)) */
+@media (width > 768px) {
+.choose__card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    transition: filter var(--transition-time);
+    z-index: 0;
+    border-radius: 20px;
+}
+
+@media (any-hover: hover) {
+.choose__card:hover::before {
+  filter: blur(4px);
+}
+}
+
+.choose__card > * {
+  position: relative;
+  z-index: var(--layer-1);
+}
+}
+/* решение по ховер эффекту, из за моей тупости)) */
+
+@media (width <= 768px) {
+    .choose__card {
+    grid-column: 1;
+    grid-row: 1;
+    border-radius: 20px;
+    background: url(../../images/choose-image/choose-card-img-1.png) ;
+    background-size: cover; 
+}
+}
+
+@media (width > 768px) {
+.choose__card:nth-child(2) {
+    grid-column: 2 / 2 span;
+    background: url(../../images/choose-image/choose-card-img-2.png) ;
+    background-size: cover; 
+}
+}
+
+@media (width <= 768px) {
+    .choose__card:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+    background: url(../../images/choose-image/choose-card-img-2.png) ;
+    background-size: cover; 
+}
+}
+
+@media (width > 768px) {
+    .choose__card:nth-child(3) {
+    grid-row-start: 2;
+    grid-column: 1 / 2 span;
+    background-image: url(../../images/choose-image/choose-card-img-3.png);
+    background-size: cover; 
+}
+}
+
+@media (width <= 768px) {
+    .choose__card:nth-child(3) {
+    grid-column: 1;
+    grid-row: 3;
+    background: url(../../images/choose-image/choose-card-img-3.png) ;
+    background-size: cover; 
+}
+}
+
+@media (width > 768px) {
+    .choose__card:nth-child(4) {
+    grid-row-start: 2;
+    grid-column: 3 ;
+    background-image: url(../../images/choose-image/choose-card-img-4.png);
+    background-size: cover; 
+}
+}
+
+@media (width <= 768px) {
+    .choose__card:nth-child(4) {
+    grid-column: 1;
+    grid-row: 4;
+    background: url(../../images/choose-image/choose-card-img-4.png);
+    background-size: cover; 
+}}
